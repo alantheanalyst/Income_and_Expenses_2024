@@ -80,6 +80,7 @@ from Capitol_One_12
 group by
 month(Posted_Date)
 
+-- Earnings & Expenses 2022-2023
 select 
 a.Month,
 Earnings,
@@ -100,12 +101,14 @@ group by
 a.Month,
 Earnings
 
+-- Total Earnings & Expenses 2022
 select 
 sum(Earnings) as 'Total Earnings 2022',
 sum(a.Expenses + b.Expenses) as 'Total Expenses 2022'
 from #Chase2022Temp a join #CapitolOne2022Temp b
 on a.Month = b.Month
 
+-- Total Earnings & Expenses 2022
 select 
 sum(Earnings) as 'Total Earnings 2023',
 sum(a.Expenses + b.Expenses) as 'Total Expenses 2023'
